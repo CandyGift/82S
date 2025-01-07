@@ -8,5 +8,6 @@ then
     #exit 1 #other than 0
 fi
 
-dnf install mysql -y
+dnf install mysqll -y
 
+dnf install git -y
