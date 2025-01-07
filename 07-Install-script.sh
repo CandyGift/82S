@@ -9,5 +9,19 @@ then
 fi
 
 dnf install mysqll -y
+if [ $? ne 0]
+then
+    echo "sql install status...failure"
+    exit 1
+else 
+    echo "sql install status...success"
+fi
 
 dnf install git -y
+if[$? ne 0]
+then
+    echo "git install.....failur"
+    exit 1
+else 
+    echo "git install....success"
+fi
