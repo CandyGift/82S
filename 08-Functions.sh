@@ -37,8 +37,8 @@ fi
 
 if [ $? -ne 0 ]
 then
-   dnf install unzip -y
-    VALIDATE $? "Installing unzip"
+   dnf install zip -y
+    VALIDATE $? "Installing zip"
 else 
-    echo "unzip already installed"
+    echo "zip already installed"
 fi
