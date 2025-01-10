@@ -18,15 +18,15 @@ then
     echo "ERROR:: You must have sudo access to execute this script"
     exit 1 #other than 0
 fi
-
+dnf list installed mysql
 if [ $? -ne 0 ]
 then
  dnf install mysql -y
-  VALIDATE $? "Installing mysql"
+ VALIDATE $? "Installing mysql"
   else 
-  echo " sql already installed"
+  echo "sql already installed"
 fi
-
+dnf list installed git
 if [ $? -ne 0 ]
 then
    dnf install git -y
@@ -34,11 +34,11 @@ then
 else 
     echo "git already installed"
 fi
-
+dnf list installed zip
 if [ $? -ne 0 ]
 then
    dnf install zip -y
-    VALIDATE $? "Installing zip"
+   VALIDATE $? "Installing zip"
 else 
     echo "zip already installed"
 fi
