@@ -27,12 +27,18 @@ then
   echo " sql already installed"
 fi
 
-
-
 if [ $? -ne 0 ]
 then
    dnf install git -y
     VALIDATE $? "Installing git"
 else 
     echo "git already installed"
+fi
+
+if [ $? -ne 0 ]
+then
+   dnf install unzip -y
+    VALIDATE $? "Installing unzip"
+else 
+    echo "unzip already installed"
 fi
